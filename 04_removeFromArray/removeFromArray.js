@@ -4,9 +4,6 @@ const removeFromArray = function(array, ...arrayVal) {
     let array1 = array;
     let array2 = arrayVal;
 
-    // Create empty array to store output
-    let newArray = [];
-
     for (i = 0; i < 9; ++i) {
 
         if (array1.includes(array2[i])) {
