@@ -1,31 +1,30 @@
 const palindromes = (string) => {
-
-    console.log(string);
-
     string = string.toLowerCase();
-    string = string.replaceAll(' ', '');
-    string = string.replaceAll(', ', '');
-    string = string.replaceAll(',', '');
-    string = string.replaceAll('.', '');
-    string = string.replaceAll('!', '');
-    console.log(string);
-
+    string = string
+        .replaceAll(' ', '')
+        .replaceAll(', ', '')
+        .replaceAll(',', '')
+        .replaceAll('.', '')
+        .replaceAll('!', '');
+        console.log(string);
 
     array = string.split('', string.length)
     let reversed = [];
     let x = 1
+
     for (i = 0; i < array.length; ++i) {
         reversed.push(array[array.length-x]);
         x = ++x;
     }
-    reversed = reversed.join('');
 
-    // Replacing non-letter characters w/o RegEx.
-    string = string.replaceAll(' ', '');
-    string = string.replaceAll(', ', '');
-    string = string.replaceAll(',', '');
-    string = string.replaceAll('.', '');
-    string = string.replaceAll('!', '');
+    reversed = reversed.join('');
+    reversed = reversed
+        .replaceAll(' ', '')
+        .replaceAll(', ', '')
+        .replaceAll(',', '')
+        .replaceAll('.', '')
+        .replaceAll('!', '');
+        console.log(reversed);
 
     if (string === reversed) return true;
     return false;
