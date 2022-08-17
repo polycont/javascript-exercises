@@ -1,5 +1,6 @@
-const getTheTitles = function() {
-
+const getTheTitles = (books) => {
+    const bookTitles = books.map(book => `${book.title}`);
+    return bookTitles;
 };
 
 // Do not edit below this line
